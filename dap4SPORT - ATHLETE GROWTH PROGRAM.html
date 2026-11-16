@@ -1,0 +1,201 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1f201d"><title>dap 4Sport | Athlete Growth Program</title><style>
+:root{--bg:#1f201d;--card:#2a2b28;--line:#464742;--white:#f7f7f4;--muted:#b8b9b3;--coral:#e24b5a}*{box-sizing:border-box}body{margin:0;background:#171816;color:var(--white);font-family:system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}.app{max-width:510px;min-height:100vh;margin:auto;background:var(--bg);padding:22px 20px 42px}.logo{width:174px;height:auto;display:block;margin-bottom:28px}.tag{font-size:11px;font-weight:800;letter-spacing:1.6px;color:#ff8791;text-transform:uppercase}h1{font-size:clamp(31px,8vw,42px);line-height:1.08;letter-spacing:-1.5px;margin:10px 0 12px}h1 span,.accent{color:var(--coral)}.intro{color:#d4d4d0;line-height:1.5;font-size:15px;margin:0 0 25px}.section{margin:25px 0 0}.section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px}h2{font-size:19px;line-height:1.3;letter-spacing:-.4px;margin:0}.hint{color:var(--muted);font-size:12px}.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.tier{border:1px solid #53544f;border-radius:13px;background:#30312e;color:var(--white);padding:14px 7px;text-align:center;cursor:pointer;min-height:65px;font:inherit}.tier strong{font-size:18px;display:block;white-space:nowrap}.tier small{display:block;font-size:10px;line-height:1.2;font-weight:500;color:var(--muted);margin-top:4px;white-space:normal}.tier[aria-pressed="true"]{background:#473035;border:2px solid var(--coral);padding:13px 6px}.tier[aria-pressed="true"] small{color:#ffc0c5}.duration-summary{display:flex;align-items:center;gap:9px;margin-top:13px;color:#d9dad4;font-size:14px}.duration-summary strong{display:inline-flex;align-items:center;white-space:nowrap;color:var(--coral);background:rgba(226,75,90,.13);border:1px solid rgba(226,75,90,.52);border-radius:999px;padding:5px 11px;font-size:14px;font-weight:850;font-variant-numeric:tabular-nums}.info-btn{width:23px;height:23px;border-radius:50%;border:1px solid #b7b8b1;color:#f7f7f4;background:transparent;font-size:13px;font-weight:800;cursor:pointer;line-height:1}.info-btn[aria-expanded="true"]{background:#454642;border-color:#f7f7f4}.info-panel{margin-top:11px;border:1px solid #575852;background:#30312e;border-radius:11px;padding:13px;font-size:13px;line-height:1.5;color:#deded9}.info-panel[hidden]{display:none}.sim{border:1px solid var(--line);border-radius:17px;padding:18px;background:var(--card)}.control{display:flex;align-items:center;justify-content:space-between;gap:10px}.stepper{display:flex;align-items:center;gap:15px}.stepper button{width:40px;height:40px;border:1px solid #676861;border-radius:12px;background:#383936;color:#fff;font-size:24px;cursor:pointer}.stepper output{font-size:25px;font-weight:800;min-width:32px;text-align:center;font-variant-numeric:tabular-nums}.range{width:100%;accent-color:var(--coral);margin:17px 0 2px}.range-ends{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}.results{border-radius:19px;background:#2d2e2b;border:1px solid #575852;padding:21px;margin-top:24px}.summary-kicker{color:#c5c6bf;font-size:11px;font-weight:800;letter-spacing:1.4px;margin-bottom:12px}.results .caption{font-size:12px;color:#d0d1cb}.big{font-size:clamp(34px,10vw,45px);font-weight:850;letter-spacing:-1.5px;margin:5px 0 4px;font-variant-numeric:tabular-nums}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:15px;border-top:1px solid #52534e;padding-top:17px;margin-top:18px}.metric-label{color:#bfc0ba;font-size:12px;line-height:1.35}.metric-value{font-size:20px;font-weight:800;margin-top:5px;font-variant-numeric:tabular-nums}.result-line{font-size:13px;color:#d9dad4;margin-top:16px;line-height:1.45}.result-line strong{color:#fff}.cta{width:100%;background:var(--coral);color:#fff;border:0;border-radius:14px;padding:16px;font:inherit;font-size:15px;font-weight:800;cursor:pointer;margin-top:19px}.cta:active{transform:scale(.99)}.under{font-size:12px;color:var(--muted);text-align:center;margin:12px 0 0}.legal{margin-top:28px;color:#a9aaa4;font-size:11px;line-height:1.55;border-top:1px solid var(--line);padding-top:16px}.toast{font-size:12px;color:#ffc2c8;text-align:center;min-height:17px;margin-top:9px}@media(max-width:350px){.app{padding:18px 14px}.tier strong{font-size:16px}.tiers{gap:6px}}@media(min-width:700px){.app{margin:25px auto;border-radius:24px;min-height:calc(100vh - 50px)}}
+.referral-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.referral-field{display:flex;flex-direction:column;gap:8px}.referral-field label{font-size:12px;color:var(--muted)}.referral-field select,.referral-field input{width:100%;min-width:0;background:#383936;border:1px solid #676861;border-radius:11px;color:#fff;padding:12px;font:inherit;font-size:16px}.referral-preview{margin-top:16px;padding-top:14px;border-top:1px solid #52534e;display:flex;justify-content:space-between;align-items:center;gap:10px}.referral-preview strong{font-size:23px;color:var(--coral);white-space:nowrap}.referral-note{color:var(--muted);font-size:12px;line-height:1.5;margin:10px 0 0}.summary-block{padding:14px 0;border-top:1px solid #52534e}.summary-heading{font-size:14px;font-weight:800;color:#fff;margin-bottom:10px}.summary-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:5px 0;font-size:13px;color:#c9cac4}.summary-row strong{font-size:17px;color:#f7f7f4;text-align:right;white-space:nowrap}.summary-small{font-size:11px;line-height:1.5;color:#aeb0aa;margin-top:6px}.summary-total{padding:17px 0 13px;border-top:1px solid #777971}.summary-net{padding:13px 0;border-top:1px solid #52534e}.summary-net strong{color:var(--coral);font-size:20px}
+/* Cards: investment + app sales, network, and distinct white summary */
+.group-card{margin-top:24px;background:#292a27;border:1px solid #50514b;border-radius:20px;padding:18px 16px 20px}.group-card .section.inner{margin-top:15px}.group-card .section.inner+.section.inner{margin-top:24px;padding-top:22px;border-top:1px solid #494a45}.group-tag{font-size:11px;letter-spacing:1.4px;font-weight:850;color:#ff8791}.group-card .sim{background:#30312e}.calc-panel{margin-top:18px;padding:18px;border:1px solid #625054;border-radius:15px;background:#342e2f}.calc-label{font-size:12px;color:#ddd0d0}.calc-big{font-size:36px;font-weight:850;letter-spacing:-1px;color:#ff8791;margin:5px 0 14px}.calc-detail{display:flex;justify-content:space-between;gap:10px;align-items:baseline;padding:7px 0;border-top:1px solid #57494b;font-size:12px;color:#d7d3d1}.calc-detail strong{color:#fff;font-size:14px;text-align:right}.calc-panel .result-line{margin-top:12px;color:#e0d9d8}.referral-card .referral-preview{border-top:1px solid #66635f}.results{background:#f8f8f5;border:1px solid #fff;color:#242522;box-shadow:0 12px 35px rgba(0,0,0,.15);padding:23px 20px}.results .summary-kicker{color:#aa4350}.summary-title{font-size:21px;line-height:1.25;margin:0 0 20px;color:#20211f}.final-row{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #e2e2dd;font-size:13px;color:#53544e}.final-row strong{color:#252622;font-size:17px;white-space:nowrap}.final-total{margin-top:16px;background:#f0e8e8;border-radius:14px;padding:16px}.final-total span{display:block;color:#59514f;font-size:12px}.final-total strong{display:block;color:#c73c4e;font-size:clamp(31px,9vw,42px);margin-top:6px;letter-spacing:-1px}.final-cost{margin-top:11px}.final-net{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:13px;padding-top:12px;border-top:2px solid #333;color:#242522;font-size:13px;font-weight:700}.final-net strong{font-size:21px;white-space:nowrap;color:#242522}.final-note{font-size:11px;color:#666760;line-height:1.5;margin:17px 0 0}@media(max-width:390px){.group-card{padding:14px 12px}.final-row strong{font-size:15px}.final-net strong{font-size:18px}}
+
+.network-calc{margin-top:16px}.network-calc .calc-big{margin-bottom:10px}.network-calc .referral-note{margin:0;color:#cfc6c6}
+
+.app{max-width:600px}.hero-desc{font-size:15px;color:#d4d4d0;line-height:1.55}.group-card{margin-top:17px}.group-title{font-size:21px;margin:9px 0 7px}.group-sub{color:#c5c6bf;font-size:13px;line-height:1.55;margin:0 0 17px}.field{margin-top:15px}.field label{display:block;font-size:13px;color:#d8d9d3;margin-bottom:8px}.field select,.field input{width:100%;border:1px solid #676861;border-radius:11px;background:#383936;color:#fff;padding:12px;font:inherit;font-size:16px}.kpi{margin-top:15px;border-top:1px solid #50514b;padding-top:14px}.kpi-title{font-size:12px;color:#cfcfc9}.kpi-num{font-size:33px;color:#ff8791;font-weight:850;margin:5px 0}.mini{font-size:12px;color:#c9cac4;line-height:1.55}.metrics-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini-stat{border:1px solid #50514b;border-radius:11px;padding:12px;background:#30312e}.mini-stat span{font-size:11px;color:#c5c6bf;display:block}.mini-stat strong{font-size:19px;display:block;margin-top:5px}.pill{display:inline-block;background:rgba(226,75,90,.15);border:1px solid rgba(226,75,90,.6);color:#ff9ca5;border-radius:999px;font-size:12px;padding:5px 11px;font-weight:800}.info-btn{vertical-align:middle}.result-white{background:#f8f8f5;border-radius:20px;padding:22px 18px;color:#222;margin-top:22px}.result-white h2{font-size:22px;margin:8px 0 14px}.white-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid #deded9;padding:12px 0;font-size:13px;color:#555}.white-row strong{color:#222;font-size:18px;white-space:nowrap}.white-note{font-size:11px;line-height:1.55;color:#666}.disclaimer{border-left:3px solid #ff8791;padding:9px 12px;color:#d1d2cb;font-size:12px;line-height:1.55;margin-top:14px;background:#30312e}.option-note{font-size:11px;color:#b9bab4;line-height:1.55;margin:10px 0 0}.tier{min-height:57px}.tiers{grid-template-columns:repeat(3,minmax(0,1fr))}.small-info{color:#d5d5d0;font-size:12px;line-height:1.55;margin:7px 0 0}.cta{margin-top:20px}.results{margin-top:18px}.subtitle{font-size:12px;color:#d1d1ca;margin-top:4px}.hidden{display:none!important}@media(max-width:390px){.metrics-2{gap:8px}.mini-stat strong{font-size:16px}}
+
+/* UX refresh: clearer hierarchy and simpler controls */
+:root{--coral:#f06370} .app{max-width:660px;padding:30px 22px 52px}.logo{margin-bottom:24px}.hero-desc{max-width:55ch;font-size:16px;line-height:1.65}.group-card{border-radius:22px;padding:24px 22px 25px;margin-top:19px;border-color:#51534d;background:#282a27;box-shadow:0 8px 25px rgba(0,0,0,.10)}.group-title{font-size:24px;letter-spacing:-.6px;line-height:1.2}.group-sub{font-size:14px;line-height:1.65;color:#deded9}.group-tag{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.status-tag{font-size:9px;letter-spacing:.7px;color:#ffd9dc;border:1px solid #885158;border-radius:999px;padding:5px 8px}.status-muted{color:#d0d0c9;border-color:#646660}.field-label{font-size:13px;font-weight:700;color:#e5e5df;margin:16px 0 10px}.pill{margin-top:3px}.control{padding:10px 0 0}.stepper button{width:46px;height:46px;border-radius:13px}.stepper output{min-width:52px;font-size:30px}.range{height:28px;cursor:pointer}.range-ends{font-size:12px}.metrics-2{margin-top:16px}.mini-stat{background:#343632;border-color:#53564f;padding:15px}.mini-stat strong{font-size:22px}.kpi{padding-top:18px;margin-top:19px}.kpi-title{font-size:13px;font-weight:700}.kpi-num{font-size:38px;letter-spacing:-1.2px}.mini{font-size:13px}.field label{font-size:13px;line-height:1.45}.field select,.field input{min-height:48px}.tier{min-height:65px}.tier:focus-visible,.stepper button:focus-visible,.cta:focus-visible,.field input:focus-visible,.field select:focus-visible,.info-btn:focus-visible{outline:3px solid #ffb3b9;outline-offset:3px}.tier[aria-pressed=true]{background:#59363b}.threshold-track{height:6px;border-radius:9px;background:#454741;margin-top:18px;overflow:hidden}.threshold-track span{display:block;height:100%;background:#ff8791;transition:width .2s}.threshold-message{font-size:12px;color:#ffb8bf;margin:9px 0 4px;line-height:1.5}.disclaimer{background:#30322e;border-left:2px solid #a8a9a2;color:#c9cac3}.result-white{margin-top:24px;border:1px solid #f5f5f0;box-shadow:0 12px 32px rgba(0,0,0,.16)}.result-white h2{font-size:24px}.final-total{background:#f4e7e8}.active-total{display:flex;justify-content:space-between;gap:12px;margin-top:14px;padding:12px 0;border-top:1px solid #deded9;color:#5e5f59;font-size:12px}.active-total strong{font-size:19px;color:#222;white-space:nowrap}.cta{min-height:54px}.white-note{margin-top:16px}.option-note{font-size:12px}@media(max-width:410px){.app{padding:22px 15px 40px}.group-card{padding:19px 15px}.group-title{font-size:22px}.metrics-2{gap:9px}.mini-stat{padding:11px}.mini-stat strong{font-size:19px}.kpi-num{font-size:34px}.active-total strong{font-size:17px}}
+.onboarding-line{margin:14px 0 8px;padding:13px 15px;border-left:3px solid #f07c70;background:rgba(255,255,255,.055);border-radius:9px;color:#eae3e3;font-size:14px;line-height:1.55}.onboarding-line strong{color:#fff}.onboarding-line{background:#30322e;border-left:2px solid #a8a9a2;color:#c9cac3;border-radius:0;padding:9px 12px;margin:14px 0 8px;font-size:12px;line-height:1.55}.onboarding-line strong{color:#f1f1ed}.entry-fee{display:flex;align-items:center;justify-content:space-between;gap:14px;background:rgba(226,75,90,.10);border:1px solid rgba(226,75,90,.48);border-radius:13px;padding:14px 16px;margin:15px 0}.entry-fee span{display:block;font-size:12px;color:#e4e4df;line-height:1.4}.entry-fee strong{color:var(--coral);font-size:27px;font-weight:850;white-space:nowrap}.net-breakdown{margin-top:13px;padding-top:12px;border-top:1px solid #575852;font-size:13px;line-height:1.65;color:#e4e4df}.net-breakdown b{color:#fff}.net-breakdown .net-value{font-size:19px;font-weight:850;color:var(--coral)} .fixed-amount{min-height:48px;padding:12px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;display:flex;flex-direction:column;gap:3px;justify-content:center}.fixed-amount strong{font-size:21px;color:#fff}.fixed-amount span{font-size:12px;color:#bdb6b6}
+:root{--bg:#1f201d;--card:#2a2b28;--line:#444640;--coral:#e24b5a}
+.app{max-width:540px;padding:24px 19px 44px}
+.logo{width:155px;margin-bottom:22px}
+.hero-label{font-size:11px;letter-spacing:1.7px;color:#f78c97;font-weight:800}
+h1{font-size:clamp(30px,8vw,39px);line-height:1.12;margin:10px 0 9px}
+.hero-lead{font-size:15px;color:#d4d5cf;line-height:1.5;margin:0 0 25px}
+.journey{display:flex;gap:8px;margin:0 0 22px}
+.journey span{flex:1;height:4px;border-radius:8px;background:#5b383c}
+.journey span:first-child{background:var(--coral)}
+.program-card{background:#2a2b28;border:1px solid #484a45;border-radius:19px;padding:20px;margin:0 0 15px}
+.card-top{display:flex;align-items:center;gap:11px;margin-bottom:7px}
+.number{display:grid;place-items:center;background:#463238;color:#ff9ba4;width:32px;height:32px;border-radius:10px;font-weight:850;font-size:14px;flex:none}
+.program-card h2{font-size:21px;margin:0;line-height:1.25}
+.one-line{font-size:14px;line-height:1.5;color:#cdd0c9;margin:9px 0 17px}
+.one-line b{color:#fff}
+.entry-strip{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#383330;border:1px solid #76534c;border-radius:12px;padding:12px 14px;margin-bottom:18px}
+.entry-strip span{font-size:13px;color:#eee1d8}
+.entry-strip strong{font-size:22px;color:#fff;white-space:nowrap}
+.question{font-size:15px;font-weight:750;line-height:1.4;margin:0 0 11px}
+.control-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.counter{display:flex;align-items:center;gap:14px}
+.counter button{height:43px;width:43px;border:1px solid #656761;border-radius:11px;background:#393b36;color:#fff;font-size:24px;cursor:pointer}
+.counter output{font-size:27px;font-weight:850;min-width:42px;text-align:center;font-variant-numeric:tabular-nums}
+.control-hint{font-size:12px;color:#bfc1bb;text-align:right}
+input[type=range]{width:100%;accent-color:var(--coral);margin:17px 0 0}
+.range-labels{display:flex;justify-content:space-between;color:#aeb0aa;font-size:11px;margin-bottom:5px}
+.network-control{display:flex;align-items:center;gap:13px}
+.network-control input{width:120px;background:#383a36;border:1px solid #747670;border-radius:12px;color:#fff;padding:13px;font-size:23px;font-weight:800}
+.network-control span{font-size:13px;line-height:1.4;color:#d0d2cc}
+.tiers{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.tier{min-height:62px;padding:10px 5px}
+.tier strong{font-size:17px}
+.tier small{font-size:10px}
+.tier[aria-pressed=true]{padding:9px 4px}
+.earning{margin-top:17px;padding-top:16px;border-top:1px solid #4b4d47;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.earning span{font-size:13px;color:#d5d7d1}
+.earning strong{font-size:28px;font-weight:850;color:#fff;white-space:nowrap;font-variant-numeric:tabular-nums}
+.detail-toggle{background:none;border:0;color:#e9b6ba;font-size:12px;cursor:pointer;padding:12px 0 0;text-align:left}
+.detail-toggle::after{content:"  ⌄"}
+details[open] .detail-toggle::after{content:"  ⌃"}
+.detail-content{font-size:12px;color:#c2c4bd;line-height:1.55;margin:8px 0 0}
+.result-white{background:#f6f6f3;color:#232420;border-radius:20px;padding:22px 19px;margin:24px 0 0}
+.result-white h2{font-size:23px;margin:4px 0 18px}
+.summary-kicker{font-size:11px;font-weight:800;letter-spacing:1.4px;color:#74756f}
+.white-row{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #deded8;font-size:14px;align-items:center}
+.white-row span{line-height:1.45}
+.white-row small{display:block;color:#73746e;margin-top:3px;font-size:11px}
+.white-row strong{white-space:nowrap;font-size:19px;font-variant-numeric:tabular-nums}
+.final-total{padding:20px 0 2px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.final-total span{font-size:14px;font-weight:750}
+.final-total strong{font-size:30px;color:#bb3546;white-space:nowrap;font-variant-numeric:tabular-nums}
+.cta{margin-top:18px;padding:18px}
+.under{line-height:1.5}
+.legal{margin-top:23px}
+@media(max-width:370px){.app{padding:18px 13px}.program-card{padding:16px}.earning strong{font-size:24px}.white-row strong{font-size:17px}.final-total strong{font-size:25px}}
+
+/* Design system: consistent type hierarchy, inputs and disclosures */
+.program-card h2,.result-white h2{font-size:22px;line-height:1.25;letter-spacing:-.45px}
+.one-line,.question{font-size:15px;line-height:1.5}
+.question{font-weight:750;margin-bottom:12px}
+.control-row{min-height:46px}
+.counter{gap:12px}
+.counter button{width:46px;height:46px;font-size:23px;font-weight:600;border-radius:12px}
+.counter output{font-size:26px;min-width:54px}
+.control-hint{font-size:12px;line-height:1.5}
+.earning{min-height:68px}
+.earning span,.white-row span{font-size:14px}
+.earning strong{font-size:27px}
+.tier{min-height:66px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.tier strong{font-size:17px}
+.program-card details{margin-top:16px}
+.detail-toggle,.legal .detail-toggle{display:flex;align-items:center;gap:10px;width:100%;border:1px solid #555750;background:#343630;color:#e5e7e1;padding:12px 13px;border-radius:12px;font-size:13px;font-weight:650;line-height:1.4;cursor:pointer;text-align:left;list-style:none;transition:background .15s,border-color .15s}
+.detail-toggle::-webkit-details-marker{display:none}
+.detail-toggle::after,details[open] .detail-toggle::after{content:none}
+.detail-toggle:hover,.detail-toggle:focus-visible{background:#3e403a;border-color:#7b7e75}
+.detail-icon{display:grid;place-items:center;flex:none;width:21px;height:21px;border:1px solid #b9bcb2;border-radius:50%;font-size:12px;font-weight:800;color:#e6e7df;font-style:normal}
+.detail-chevron{margin-left:auto;flex:none;width:9px;height:9px;border-right:2px solid #c3c6bd;border-bottom:2px solid #c3c6bd;transform:rotate(45deg) translateY(-2px);transition:transform .15s}
+details[open] .detail-chevron{transform:rotate(225deg) translateY(-1px)}
+.detail-content{margin:0;padding:14px 13px 3px;color:#d0d2ca;font-size:13px;line-height:1.6}
+.legal{margin-top:16px}
+.legal .detail-toggle{background:#292b27;border-color:#4d5048}
+.legal .detail-content{padding-bottom:10px}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid #ff98a3;outline-offset:3px}
+@media(max-width:370px){.program-card h2,.result-white h2{font-size:20px}.detail-toggle{font-size:12px}}
+
+.final-total{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:8px!important;padding:20px 12px!important;min-width:0}.final-total span,.final-total strong{display:block!important;text-align:center!important;margin:0!important;width:100%!important;max-width:100%;white-space:normal!important;line-height:1.2!important}.final-total strong{font-size:clamp(30px,8vw,42px)!important;letter-spacing:-.5px!important}
+.ambassador-choice{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#383330;border:1px solid #76534c;border-radius:13px;padding:13px 14px;cursor:pointer;margin-bottom:18px}.ambassador-choice>span:first-child{display:flex;flex-direction:column;gap:4px}.ambassador-choice b{font-size:15px}.ambassador-choice small{font-size:12px;color:#d5c9c6}.ambassador-choice input{position:absolute;opacity:0;width:1px;height:1px}.choice-switch{flex:none;width:49px;height:28px;border-radius:20px;background:#747570;position:relative;transition:background .2s}.choice-switch:before{content:"";position:absolute;width:22px;height:22px;background:white;border-radius:50%;top:3px;left:3px;transition:transform .2s}.ambassador-choice input:checked+.choice-switch{background:#e24b5a}.ambassador-choice input:checked+.choice-switch:before{transform:translateX(21px)}.ambassador-choice:focus-within{outline:2px solid #f8a6af;outline-offset:3px}.state-note{padding:12px 14px;border-radius:11px;background:#3b3835;color:#e5d5d0;font-size:13px;line-height:1.5;margin:0 0 15px}.is-locked #networkInteractive{opacity:.35;pointer-events:none}.is-locked .earning{opacity:.7}button:disabled,input:disabled{opacity:.5;cursor:not-allowed}
+
+.tiers .tier strong{font-size:clamp(13px,3.8vw,17px);letter-spacing:-.3px;white-space:nowrap}
+.tiers .tier{min-width:0;overflow:hidden}
+</style></head><body><main class="app"><img class="logo" alt="dap 4Sport" src="data:image/png;base64,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">
+<div class="hero-label">ATHLETE GROWTH PROGRAM</div>
+<h1>Il tuo network.<br><span>Il tuo guadagno.</span></h1>
+<p class="hero-lead">Scegli quante persone puoi coinvolgere e scopri quanto potresti guadagnare con dap 4Sport.</p>
+
+
+<section class="program-card" aria-labelledby="title1">
+ <div class="card-top"><span class="number">1</span><h2 id="title1">Diventa Ambassador</h2></div>
+ <p class="one-line">Versi <b>500 €</b> per entrare nel programma di 12 mesi. Dalla <b>14ª vendita</b> guadagni <b>40 €</b> per ogni abbonamento annuale.</p>
+ <label class="ambassador-choice"><span><b>Divento Ambassador</b><small>Quota di ingresso: 500 €</small></span><input type="checkbox" id="ambassadorToggle"><span class="choice-switch"></span></label><p id="ambassadorOffNote" class="state-note" hidden>Non aderendo, non versi 500 € e non maturi commissioni Ambassador.</p>
+ <p class="question">Quanti abbonamenti pensi di vendere in un anno?</p>
+ <div class="control-row"><div class="counter"><button id="appMinus" type="button" aria-label="Riduci abbonamenti">−</button><output id="appTotalSalesText">0</output><button id="appPlus" type="button" aria-label="Aumenta abbonamenti">+</button></div><span class="control-hint">abbonamenti<br>annuali</span></div>
+ <input id="appTotalSales" type="range" min="13" max="1000" value="13" aria-label="Numero abbonamenti annuali">
+ <div class="range-labels"><span>13</span><span>1.000</span></div>
+ <div class="earning"><span>Commissioni sulle vendite</span><strong id="appGross">0 €</strong></div>
+ <details><summary class="detail-toggle"><span class="detail-icon">i</span><span>Come si calcola?</span><span class="detail-chevron" aria-hidden="true"></span></summary><p class="detail-content">Le prime 13 vendite non generano commissioni. Dalla 14ª: 40 € per ogni vendita. La quota iniziale di 500 € viene sottratta nel guadagno netto del riepilogo.</p></details>
+</section>
+
+<section class="program-card" aria-labelledby="title2" id="networkCard">
+ <div class="card-top"><span class="number">2</span><h2 id="title2">Trova altri Ambassador</h2></div>
+ <p class="one-line">Per ogni nuovo Ambassador che presenti, con quota di ingresso di <b>500 €</b>, il compenso previsto è di <b>50 €</b>.</p>
+ <p id="networkLockedNote" class="state-note" hidden>Per attivare il Network, devi aderire come Ambassador nella sezione 1.</p><div id="networkInteractive"><p class="question">Quanti nuovi Ambassador puoi presentare?</p>
+ <div class="control-row"><div class="counter"><button id="refMinus" type="button" aria-label="Riduci nuovi Ambassador">−</button><output id="refCountText">0</output><button id="refPlus" type="button" aria-label="Aumenta nuovi Ambassador">+</button></div><span class="control-hint">nuovi Ambassador<br>× 50 €</span></div><input id="refCount" type="range" min="0" max="1000" value="0" aria-label="Numero nuovi Ambassador"><div class="range-labels"><span>0</span><span>1.000</span></div>
+ </div><div class="earning"><span>Compenso Network</span><strong id="refGross">0 €</strong></div>
+</section>
+
+<section class="program-card" aria-labelledby="title3">
+ <div class="card-top"><span class="number">3</span><h2 id="title3">Investi in dap4sport</h2></div>
+ <p class="one-line">L’investimento in dap4sport prevede il <b>5% annuo per 5 anni</b> sul capitale investito.</p>
+ <p class="question">Quanto vuoi investire?</p>
+ <div class="tiers" id="financeTiers"></div>
+ <div class="earning"><span>Interessi totali in 5 anni</span><strong id="interestFive">0 €</strong></div>
+ <details><summary class="detail-toggle"><span class="detail-icon">i</span><span>Durata e restituzione del capitale</span><span class="detail-chevron" aria-hidden="true"></span></summary><p class="detail-content">Interessi semplici del 5% annuo per 5 anni. Il capitale investito è distinto dal guadagno e la sua restituzione alla scadenza dipende dalle condizioni contrattuali e dalla capacità di rimborso della società.</p></details>
+</section>
+
+<section class="result-white" aria-live="polite">
+ <div class="summary-kicker">IL TUO RIEPILOGO</div>
+ <h2>Quanto potresti guadagnare</h2>
+ <div class="white-row"><span>1 · Diventa Ambassador<small id="sumAppFee">Quota versata: 0 €</small></span><strong id="sumApp">0 €</strong></div>
+ <div class="white-row"><span>2 · Trova altri Ambassador</span><strong id="sumNetwork">0 €</strong></div>
+ <div class="white-row"><span>3 · Investi in dap4sport<small>Capitale investito: <span id="sumFinanceCapital">0 €</span></small></span><strong id="sumInterest">0 €</strong></div>
+ <div class="final-total"><span>Guadagno totale netto<br>stimato</span><strong id="sumTotal">0 €</strong></div>
+</section>
+<button class="cta" id="sendAnonymous" type="button">Invia la simulazione</button>
+<p class="under" id="sendFeedback" role="status" aria-live="polite">I dati della simulazione vengono inviati in forma anonima.</p>
+<details class="legal"><summary class="detail-toggle"><span class="detail-icon">i</span><span>Informazioni importanti</span><span class="detail-chevron" aria-hidden="true"></span></summary><p class="detail-content">Simulazione indicativa, prima delle imposte e non garantita. Il compenso per il reclutamento di Ambassador paganti richiede verifica legale e regolamentare, anche in relazione agli schemi piramidali. L’investimento, gli interessi e la restituzione del capitale richiedono accordi validi e comportano rischi. Il simulatore non costituisce offerta di investimento né promessa di rendimento.</p></details>
+</main><script>(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const euro=n=>new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);
+let appTotalSales=13,financed=0;
+const financeAmounts=[0,2500,5000,7500,10000,15000,20000,25000,30000,40000,50000,60000];
+const tiers=$('financeTiers');
+financeAmounts.forEach(v=>{
+ const b=document.createElement('button');b.type='button';b.className='tier';b.dataset.value=v;
+ b.innerHTML=v===0?'<strong>0 €</strong><small>nessun investimento</small>':'<strong>'+euro(v)+'</strong>';
+ b.addEventListener('click',()=>{financed=v;update()});tiers.appendChild(b);
+});
+function update(){
+ const total=appTotalSales,eligible=Math.max(0,total-13),commission=eligible*40;
+ const count=Math.max(0,Math.min(1000,Math.floor(Number($('refCount').value)||0)));
+ const ambassador=$('ambassadorToggle').checked,network=ambassador?count*50:0,interest=financed*.25;
+ $('networkInteractive').inert=!ambassador;
+ $('networkCard').classList.toggle('is-locked',!ambassador);
+ $('networkLockedNote').hidden=ambassador;
+ $('ambassadorOffNote').hidden=ambassador;
+ $('sumAppFee').textContent=ambassador?'Quota versata: 500 €':'Quota versata: 0 €';
+ $('appTotalSales').disabled=!ambassador;$('appMinus').disabled=!ambassador;$('appPlus').disabled=!ambassador;
+ $('appTotalSales').value=total;$('appTotalSalesText').textContent=ambassador?total:0;$('refCountText').textContent=count;
+ $('appGross').textContent=euro(ambassador?commission:0);$('refGross').textContent=euro(network);
+ for(const b of tiers.children)b.setAttribute('aria-pressed',String(Number(b.dataset.value)===financed));
+ $('interestFive').textContent=euro(interest);
+ $('sumApp').textContent=euro(ambassador?commission-500:0);
+ $('sumNetwork').textContent=euro(network);
+ $('sumInterest').textContent=euro(interest);
+ $('sumFinanceCapital').textContent=euro(financed);
+ $('sumTotal').textContent=euro((ambassador?commission-500:0)+network+interest);
+}
+$('ambassadorToggle').onchange=update;
+$('appMinus').onclick=()=>{appTotalSales=Math.max(13,appTotalSales-1);update()};
+$('appPlus').onclick=()=>{appTotalSales=Math.min(1000,appTotalSales+1);update()};
+$('appTotalSales').oninput=e=>{appTotalSales=Math.max(13,Number(e.target.value));update()};
+$('refMinus').onclick=()=>{$('refCount').value=Math.max(0,Number($('refCount').value)-1);update()};
+$('refPlus').onclick=()=>{$('refCount').value=Math.min(1000,Number($('refCount').value)+1);update()};
+$('refCount').oninput=update;
+const SHEET_ENDPOINT='https://script.google.com/macros/s/AKfycbz3RkJ0G_7LAOjvE53jERVgCt3OsRcNSNmwfkNnBh9N7xGQ65eAg2E3Qs9SJ7JiCmVVWQ/exec';
+$('sendAnonymous').onclick=async()=>{
+ const button=$('sendAnonymous'),feedback=$('sendFeedback');
+ const count=Math.max(0,Math.min(1000,Math.floor(Number($('refCount').value)||0)));
+ const ambassador=$('ambassadorToggle').checked,eligible=ambassador?Math.max(0,appTotalSales-13):0,appCommission=eligible*40,network=ambassador?count*50:0,interest=financed*.25;
+ const payload={schema_version:'4',quota_ambassador_eur:ambassador?500:0,durata_ambassador_mesi:12,abbonamenti_totali:ambassador?appTotalSales:13,vendite_remunerate:eligible,commissioni_app_eur:appCommission,guadagno_app_netto_eur:ambassador?appCommission-500:0,nuovi_ambassador:ambassador?count:0,quota_nuovo_ambassador_eur:500,guadagno_network_eur:network,capitale_finanziato_eur:financed,durata_finanziamento_mesi:60,tasso_interesse_annuo_percento:5,guadagno_interessi_eur:interest,capitale_totale_versato_eur:(ambassador?500:0)+financed,guadagno_totale_netto_eur:(ambassador?appCommission-500:0)+network+interest};
+ button.disabled=true;button.textContent='Invio in corso…';feedback.textContent='Trasmissione in corso.';
+ try{
+  await fetch(SHEET_ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+  feedback.textContent='Richiesta inviata. Controlla il Google Sheet per confermare la registrazione.';
+ }catch(err){feedback.textContent='Invio non riuscito. Controlla la connessione e riprova.'}
+ finally{button.disabled=false;button.textContent='Invia la simulazione'}
+};update();
+})();</script></body></html>
